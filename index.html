@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI ENCRIPTADOR DE TEXTO</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Comfortaa&family=Protest+Strike&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <main>
+        <nav>
+            <img src="imagenes/Logo.png" class="logo">
+            <button id="theme-toggle">
+            <img src="/imagenes/sun-svgrepo-com.svg"  class="claro" id="miImagen" alt="Imagen 1"></img>
+          
+        </button> 
+         </nav>
+      
+  <div class="texto-original-container">
+    <textarea class="texto-original" id="texto-original" oninput="validarTexto(this)" placeholder="Ingresa tu texto aquí"> </textarea>
+    </div>
+
+    <div class="texto-resultado-container">
+    <textarea class="texto-resultado" id="resultado" readonly> </textarea>
+        <h1 class="resultado-msj-p1">Ningun mensaje fue encontrado.</h1>    
+        <p class="resultado-msj-p2"> Ingrese el texto que desea encriptar o desencriptar</p>
+        
+    <section id="textarea-container">
+    </div>
+<div>
+    <p class="info-minus">Solo letras minusculas, y sin acentos.</p>
+</div>
+    <div id="btn-acciones">
+  <button clas="btn-conj"onclick="encriptar()">Encriptar</button>
+  <button clas="btn-conj"onclick="desencriptar()">Desencriptar</button>
+  <button class="btn-conj"onclick="copiar()">Copiar</button>
+</div>
+
+</main> 
+
+<script src="java.js"> </script>
+</body>
+</html>
