@@ -1,0 +1,640 @@
+
+:root
+{
+     --background-text-area: #121675;
+
+    --text-area: Oxygen;
+    --text-area-color: white;
+    --text-msj-color: rgb(243, 234, 234);
+    --text-border-shadow: 5px 1px 1px rgba(0, 0, 0, 0.5);
+    --color-verde-dark: #008080;
+    --color-backgroud-dark: #04686d;
+}
+body{
+    max-width: 95dvw;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(246, 246, 246);
+    background-image: url(/imagenes/FondoPantallaClaro.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    box-sizing: border-box;
+    transition: .3s ease all;
+    font-size: 19px;
+}
+                                                /*INICIO NAV*/    
+.navegacion{
+    position:relative;
+    height: 8.5vh;
+    max-width:90vw;
+    left: 0.5vw;
+    top: 2vh;
+    margin: auto 0;
+    padding-right: 1%;
+    font-weight: bold;
+    background-color: #d5d5ffcd;
+    border-radius: 150px;
+    opacity: 95%;
+   }
+.logo-alura-claro{
+    position: absolute;
+    bottom: 0.3em;
+    left: 0.1em;
+    display: unset;  
+}
+.logo-alura-dark{
+    display: none;
+}
+.switch{
+    position: absolute;
+    right: 0.5%;
+    top: -0.7rem;
+    margin: 2em;
+    background: #111;
+    border-radius: 950px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+.switch::after {
+        position: absolute;
+        height: 1.875rem;
+        width: 1.875rem;
+        content: "";
+        display: block;
+        top: 0;
+        left: unset;
+        right: 0;  
+        background: #ddd;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+    }
+.switch.active{
+        background: gold;
+        color: #111;
+    }
+.switch.active::after{
+            right: unset;
+            left: 0;
+        }
+.switch span{
+        width: 1.875rem;
+        height: 1.875rem;
+        line-height: 1.875rem;
+        display: block;
+        background: none;
+        color: #ffffff;
+    }
+h1{
+        position: absolute;
+        left: 4.5em;
+        top: 0;
+        width: 20.875rem;
+        color:#00087af4;
+        opacity: 95%;
+        font-family: protest strike;
+}
+                                                /*FIN NAV*/    
+
+                                               /*Modo Oscuro Body*/
+    
+body.dark nav img.logo-alura-claro{
+        display: none;
+ }
+    body.dark nav img.logo-alura-dark{
+    position: absolute;
+    bottom: 0.3em;
+    left: 0.1em;
+    display: unset;
+    }
+    .dark{
+          background-image: url(/imagenes/FondoPantallaOscuro.svg);
+          color: #ffffff;
+  }
+                                                        /*FIN MODO OSCURO BODY*/
+                                                        /*INICIO CAJAS ENCRIPTADO*/    
+.texto-cajas{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content:space-around;
+    margin: 20px 10px;
+    max-width: 1500px;
+    width: 90%;
+    gap: 10px;
+    resize: none;
+    box-sizing: border-box;
+    opacity: 92%;
+}
+.texto-original-container{
+    position: relative;
+    left: 1.5vw;
+    bottom: 6.1vh; 
+    resize: none;
+    width: 40vw;
+    height: 65vh;
+    background-color: var(--background-text-area);
+    border: transparent;
+    box-sizing: border-box;
+    border-radius: 5px 15px 20px 15px; 
+
+}
+body.dark div .texto-original-container{
+    background-color: var(--color-backgroud-dark);
+}
+ ::placeholder{
+    font-family: 'ADLaM Display';
+    color: #b0edaddb;
+    text-shadow: #ffffff;
+ }
+.texto-original{
+    position: absolute;
+    border: transparent;
+    resize: none;
+    background-color: transparent;
+    font-family: var(--text-area);
+    color: var(--text-area-color);
+    font-size: 1.4em;
+    height: 28.125rem;
+    width: 30.625rem;
+    outline: none;
+}
+.texto-resultado-container{
+    position: relative;
+    left: 2vw;
+    bottom: 6.1vh; 
+    resize: none;
+    padding: 0%;
+    width: 40vw;
+    height: 65vh;
+    background-color: var(--background-text-area);
+    border: transparent;
+    box-sizing: border-box;
+    background-image: url(/imagenes/Muñeco.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 19vw 45vh;
+    box-sizing: border-box;
+    border-radius: 5px 15px 20px 15px; 
+}
+body.dark div .texto-resultado-container{
+    background-color: var(--color-backgroud-dark);
+}
+.texto-resultado-textarea{
+    position: absolute;
+    resize: none;
+    background-color: transparent;
+    border: transparent;
+    font-family: var(--text-area);
+    color: var(--text-area-color);
+    font-size: 1.4em;
+    height: 28.125rem;
+    width: 30.625rem;
+    outline: none;
+}
+.resultado-msj-p1{
+    position: absolute;
+    top: 0.5vh;
+    left: 10vw;
+    text-align: center;
+    font-family: Cairo, sans-serif;
+    line-height: 1.1;
+    font-size: 1.4em;
+    color: var(--text-msj-color);
+    opacity: 100%;
+    text-shadow: var(--text-border-shadow);
+}
+.resultado-msj-p2{
+    position: absolute;
+    top: 49vh;
+    left: 8vw;
+    text-align: center;
+    font-family: Comfortaa, sans-serif;
+    line-height: 1.2;
+    font-size: 1.5em;
+    color: var(--text-msj-color);
+    text-shadow: var(--text-border-shadow);
+    opacity: 100%;
+}
+.info-tolower{
+    position: absolute;
+    bottom: 4.7vw;
+    left: 5.7vw;
+    font-size: 0.917rem;
+    color: #6f99fa; 
+    background-color: #022471;
+    opacity: 88%;
+    max-width: 740px;
+    font-family: Merienda, sans-serif;
+}
+body.dark div .info-tolower{
+    background-color: var(--color-backgroud-dark);
+    color: #c7e3e3;
+}
+                                                        /*FIN CAJAS ENCRIPTADO*/    
+                                                        /*INICIO BOTONES*/    
+.btn-acciones-container{
+    position: absolute;
+    top: 85.7vh;
+    left: 25vw;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 10fr;
+    justify-content: space-around;
+    gap: 5px;
+    outline: none
+}
+.btn-acciones-menu{    
+    color: rgb(210, 206, 255);
+    background-color: #0f1879;
+    padding: 12px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    width: 9.375em;
+    outline: none;
+}
+body.dark div .btn-acciones-menu{
+    background-color: var(--color-verde-dark);
+}
+.btn-acciones-menu:hover{
+    background-color: #3e8e41;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.15);
+  }
+  body.dark div .btn-acciones-menu:hover{
+    background-color: var(--color-verde-dark);
+  }
+                                                        /*FIN BOTONES*/    
+                                                        /*INICIO FOOTER*/ 
+.footer{
+    position: relative;
+    left: 41vw;
+    top: 91vh;
+    a {
+        color: var(--color-verde-dark);
+        text-decoration: none;
+      }
+}
+.footer-p{
+    left: 43vw;
+    top: 91vh;
+    position: absolute;
+    color: #f9ffff;
+    background-color: #ff7700;
+    font-size: 1.1rem;
+}
+.footer-p:hover{
+    top: 91vh;
+    background-color: #0f0691;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.15);
+}
+body.dark footer .footer-p{
+    background-color: var(--color-verde-dark);
+}
+body.dark footer .footer-p:hover{
+    background-color: var(--color-backgroud-dark);
+}
+.contacto-container{
+    position: relative;
+    left: 41vw;
+    top: 2.8vh;
+    width: 12vw;
+}
+.contacto{
+    font-size: 30px;
+    float: left;
+    width: 2.5vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 0 10px;
+    color: #dd6b00;
+    background-color: #f3daca;
+    opacity: 85%;
+}
+.contacto:hover{
+    background-color: #0f0691;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.15);
+}
+body.dark footer .contacto{
+    color: var(--text-area-color);
+    background-color: var(--color-backgroud-dark);
+}
+body.dark footer .contacto:hover{
+   background-color: var(--text-border-shadow);
+}
+                                                        /*FIN FOOTER*/    
+                                        /* MEDIA (laptops/desktops, 1024px) */
+@media only screen and (max-width: 1024px) {
+    body{
+        background-position: center;
+        min-width: 95vw;
+        min-height: 100vh;
+        }
+    .navegacion{
+        top: 1vh;
+        margin: 30px 0px;
+        height: 5.5vh;
+    }
+
+    .logo-alura-claro{
+        top: 0.9vh;
+        
+    }
+    .logo-alura-dark{
+        display: none;
+    }
+
+                                                    /*FIN NAV*/   
+                                                    /*/*INICIO CAJAS ENCRIPTADO*/    
+    .texto-cajas{
+        min-width: 50vw;
+        min-height: 15vh;
+    }
+    .texto-original-container{
+        bottom: 2vh;
+        min-width: 40vw;
+        min-height: 15vh;
+    }
+    
+    .texto-original{
+        top: 2vh;
+        max-width: 38vw;
+        min-height: 15vh;
+        background-size: 150px 200px;
+        background-position: center;
+    }
+    .texto-resultado-container{
+        bottom: 2vh;
+        min-width: 25vw;
+        min-height: 1vh;
+        background-size: 150px 200px;
+        background-position: center;
+    }
+    .texto-resultado-textarea{
+        top: 2vh;
+        max-width: 38vw;
+        min-height: 15vh;
+        background-size: 150px 200px;
+        background-position: center;
+        
+    }
+    .resultado-msj-p1{
+        position: absolute;
+        top: 0.5vh;
+        left: 8vw;
+        font-size: 100%;
+    }
+    .resultado-msj-p2{
+        position: absolute;
+        bottom: 18vh;
+        left: 8vw;
+        font-size: 100%;
+    }
+    .info-tolower{
+        max-width: 45vw;
+        left: 6.7vw;
+        bottom:23vh
+    }
+                                                            /*FIN CAJAS ENCRIPTADO*/    
+                                                            /*INICIO BOTONES*/    
+    .btn-acciones-container{
+        position: absolute;
+        top: 77vh;
+        left: 19vw;
+    }                                                         /*FIN BOTONES*/    
+                                                            /*INICIO FOOTER*/ 
+    .footer{
+        top: 0.1vh;
+    }
+    .footer-p{
+        top: 82.1vh;
+        left: 40vw;
+    }
+    .footer-p:hover{
+        top: 82.1vh;
+        left: 40vw;
+    }
+    .contacto-container{
+        top: 6.1vh;
+        left: 39vw;
+        width: 14vw;
+    }
+}
+                                        /* FIN MEDIA (laptops/desktops, 1024px) */
+@media only screen and (max-width: 768px) {
+    body{
+    background-position: center;
+    min-width: 95vw;
+    min-height: 100vh;
+    }
+.navegacion{
+    top: 1vh;
+    margin: 10px 5px;
+    height: 6.5vh;
+}
+
+.logo-alura-claro{
+    top: 0.9vh;
+    
+}
+.logo-alura-dark{
+    display: none;
+}
+                                                /*FIN NAV*/    
+
+                                               /*Modo Oscuro Body*/
+    
+body.dark nav div img.logo-alura-claro {
+        display: none;
+ }
+                                                        /*FIN MODO OSCURO BODY*/
+                                                        /*/*INICIO CAJAS ENCRIPTADO*/    
+.texto-cajas{
+    min-width: 50vw;
+    min-height: 15vh;
+    display: grid;
+    grid-template-columns:1fr;
+    
+}
+.texto-original-container{
+    bottom: 1vh;
+    min-width: 90vw;
+    max-height: 35vh;
+}
+
+.texto-original{
+    top: 2vh;
+    min-width: 90vw;
+    max-height: 35vh;
+    background-size: 150px 200px;
+    background-position: center;
+}
+.texto-resultado-container{
+    bottom: 1vh;
+    min-width: 90vw;
+    max-height: 35vh;
+    background-size: 150px 200px;
+    background-position: center;
+}
+.texto-resultado-textarea{
+    top: 2vh;
+    min-width: 90vw;
+    max-height: 35vh;
+    background-size: 150px 200px;
+    background-position: center;
+    
+}
+.resultado-msj-p1{
+    position: absolute;
+    top: 0.5vh;
+    left: 21vw;
+    font-size: 100%;
+}
+.resultado-msj-p2{
+    position: absolute;
+    top: 26vh;
+    left: 21vw;
+    font-size: 100%;
+}
+.info-tolower{
+    max-width: 45vw;
+    left: 8vw;
+    bottom:16.8vh
+}
+                                                        /*FIN CAJAS ENCRIPTADO*/    
+                                                        /*INICIO BOTONES*/    
+.btn-acciones-container{
+    position: absolute;
+    top: 82vh;
+    left: 8.4vw;
+}                                                         /*FIN BOTONES*/    
+                                                        /*INICIO FOOTER*/ 
+.footer{
+    top: 86vh;
+}
+.footer-p{
+    top: 86.1vh;
+    left: 37vw;
+}
+.footer-p:hover{
+    top: 86.1vh;
+    left: 37vw;
+}
+.contacto-container{
+    top: 6.1vh;
+    left: 38vw;
+    min-width: 25vw;
+}
+.contacto{
+    width: 5vw;
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+
+.navegacion{
+    margin: 10px 5px;
+    height: 7.5vh;
+}
+
+.logo-alura-claro{
+    top: 0.9vh;
+    left: -3vw;
+    
+}
+.logo-alura-dark{
+    display: none;
+}
+.switch{
+    font-size: 15px;
+    right: -3vw;
+}
+h1{
+    min-width: 1000px;
+    font-size: 25px;
+    left: 15vw;
+}
+
+                                                /*FIN NAV*/    
+
+                                               /*Modo Oscuro Body*/
+    
+body.dark nav div img.logo-alura-claro {
+        display: none;
+ }
+                                                        /*FIN MODO OSCURO BODY*/
+                                                        /*/*INICIO CAJAS ENCRIPTADO*/    
+.texto-original{
+    top: 0.5vh;
+}
+.texto-resultado-container{
+    bottom: 1vh;
+    min-width: 901vw;
+    max-height: 35vh;
+    background-size: 150px 200px;
+    background-position: center;
+}
+.texto-resultado-textarea{
+    top: 0.5vh;    
+}
+.resultado-msj-p1{
+    position: absolute;
+    top: 0.5vh;
+    left: 21vw;
+    font-size: 100%;
+}
+.resultado-msj-p2{
+    position: absolute;
+    top: 26vh;
+    left: 21vw;
+    font-size: 100%;
+}
+.info-tolower{
+    max-width: 59vw;
+    left: 8vw;
+    bottom:12.7vh
+}
+                                                        /*FIN CAJAS ENCRIPTADO*/    
+                                                        /*INICIO BOTONES*/    
+.btn-acciones-container{
+    position: absolute;
+    top: 86vh;
+    left: 8.4vw;
+}                       
+.btn-acciones-menu{
+    width: 20vw;
+    height: 5.8vh;
+}
+                                                        /*FIN BOTONES*/    
+                                                        /*INICIO FOOTER*/ 
+.footer{
+    top: 90.1vh;
+}
+.footer-p{
+    top: 90.1vh;
+    left: 31vw;
+}
+.footer-p:hover{
+    top: 90.1vh;
+    left: 31vw;
+}
+.contacto-container{
+    top: 9.1vh;
+    left: 32vw;
+    min-width: 35vw;
+}
+.contacto{
+    width: 7vw;
+}
+}
+                                        /* FIN MEDIA (celulares 480px) */

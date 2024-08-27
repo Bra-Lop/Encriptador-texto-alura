@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI ENCRIPTADOR DE TEXTO</title>
+    <link rel="stylesheet" href="estilos.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap&family=Cairo&family=Comfortaa&family=Merienda:wght@300..900&family=Oxygen:wght@300;400;700&family=Protest+Strike&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="icon" href="/imagenes/encriptador.png">
+</head>
+<body>
+    <nav class="navegacion">
+        <ul>
+        <li class="logosAlura">
+            <img  class="logo-alura-claro" src="/imagenes/LogoAluraClaro.png" alt="LogoAlura" >
+            <img  class="logo-alura-dark" src="/imagenes/LogoAluraOscuro.png" alt="LogoAluraOscuro">
+                                   
+        </li> 
+        <li>
+            <h1>ENCRIPTADOR DE TEXTO</h1>      
+            <button class="switch" id="switch">
+                <span><i class="fa-solid fa-cloud-moon"></i></span>
+                <span><i class="fa-solid fa-cloud-sun"></i></span>
+            </butto>
+        </li>
+    </ul>
+    </nav>
+   <div class="texto-cajas">
+    <div class="texto-original-container">
+    <textarea class="texto-original" id="texto-original" oninput="validarTexto(this.value)" placeholder= "Ingresa tu texto aquí" autocomplete="off"> </textarea>
+    </div>
+
+    <div class="texto-resultado-container">
+        <textarea class="texto-resultado-textarea" id="texto-resultado" readonly> </textarea>
+        <h3 class="resultado-msj-p1" id="texto-borrar">Ningun mensaje fue encontrado.</h3>    
+        <p class="resultado-msj-p2" id="texto-borrar"> Ingrese el texto que desea</br> encriptar o desencriptar</p>
+    </div>        
+    </div>
+    <div><p class="info-tolower">Solo letras minuscula, y sin acentos.</p>
+    </div>   
+    <div class="btn-acciones-container" id="btn-acciones">
+          <button class="btn-acciones-menu" onclick="encriptar()">Encriptar</button>
+          <button class="btn-acciones-menu"onclick="desencriptar()">Desencriptar</button>
+          <button class="btn-acciones-menu"onclick="copiar()">Copiar</button>
+          <button class="btn-acciones-menu"onclick="limpiarTextareas()">Limpiar Texto</button>
+    </div>
+
+</div>
+
+<script src="java.js"> </script>
+
+<footer>
+    <p class="footer-p">Creado &copy por Brayan Lopez</p>
+    <div class="contacto-container">
+    <a class="contacto" href="https://github.com/Bra-Lop" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a class="contacto" href="https://www.linkedin.com/in/brayan-lopez-233096316/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a class="contacto" href="https://app.aluracursos.com/user/brayan-lopez231" target="_blank"><i class="fa-brands fa-amilia"></i></a>
+</div>
+</footer>
+</body>
+</html>
